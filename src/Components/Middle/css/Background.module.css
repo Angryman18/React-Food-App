@@ -1,0 +1,11 @@
+body {
+    background-color: rgb(68, 59, 59);
+}
+
+.background {
+    clip-path: polygon(50% 0%, 100% 0, 100% 35%, 100% 100%, 81% 81%, 53% 87%, 26% 82%, 0 100%, 0 0, 14% 0);
+    width: auto;
+    height: 500px;
+
+
+}

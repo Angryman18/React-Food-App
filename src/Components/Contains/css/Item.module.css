@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap');
+
+.item {
+    display: flex;
+    justify-content: space-between;   
+    width: 600px;
+    height: 100px;
+    border: 1px solid;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 10px;
+    transition: 0.1s ease-out;
+    background-color: #F0E68C;
+}
+
+.item:hover {
+    width: 620px;
+    transition: 0.2s ease-out;
+}
+
+.item img{
+    border: 1px solid;
+    padding: 2px;
+}
+
+
+.thumbnail {
+    display: flex;
+    flex: 1;
+    align-items: center;
+}
+
+.itemDesc {
+    flex: 3;
+    text-align: left;
+    padding: 5px;
+
+}
+
+/* Quantitiy */
+.itemQun{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.itemQun div:nth-child(1) {
+    margin: 10px;
+    width: 100px;
+}
+
+span#qty {
+    font-weight: bold;
+    padding: 3px;
+}
+
+span#qtyinput input{
+    outline: none;
+    border: 1px solid;
+    width: 40%;
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+span#qtyinput input:focus {
+    border: 2px solid black;
+}
+
+span#salepricetext{
+    font-weight: bold;
+}
+
+button#btnAdd {
+    width: 110px;
+    height: 40px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border: 0px;
+    background: brown;
+    color: white;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: 0.1s ease-in-out;
+    font-family: 'Hammersmith One', sans-serif;
+}
+button#btnAdd:hover {
+    width: 100px;
+    font-size: 1.5rem;
+    border: 2px solid black;
+    background-color: brown;
+    transition: 0.1s ease-in;
+    font-family: 'Hammersmith One', sans-serif;
+}
+
+.category {
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'Hammersmith One', sans-serif;
+}
+
+span#price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    
+    
+}
+
+span#actualprice {
+    padding-left: 5px;
+    text-decoration: line-through;
+    font-style: italic;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: red;
+}
+span#timeicon {
+    vertical-align: middle;
+}
+
+span#save {
+    font-size: small;
+    color: green;
+    font-weight: bold;
+    font-style: italic;
+}
+
+span#tickicon {
+    vertical-align: middle;
+}
+
+span t{
+    font-weight: bold;
+    color: rgb(92, 91, 84);
+}
