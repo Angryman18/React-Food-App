@@ -28,7 +28,7 @@ const Contains = (props) => {
             <div className={style.body}>
 
                 {items.map((item, index) => {
-                    return <Item key={index} id={index} onChange={(e) => props.onChange(e, item.title)} Submission={(e) => props.Submission(e, item.title)} title={item.title} price={item.price} actualprice={item.actualprice} save={save(item.price, item.actualprice)} button={item.title}/>
+                    return <Item key={index} id={index} onChange={(e) => props.onChange(e, item.title)} Submission={(e) => props.Submission(e, item.title)} title={item.title} price={item.price} actualprice={item.actualprice} save={save(item.price, item.actualprice)} button={item.title} />
                 })}
 
                 {/* <Item key="1" refData={props.qty} Submission={props.onClick} title="baking Rice" price="5.99" actualprice="6.99" save={save(5.99, 6.99)} /> */}

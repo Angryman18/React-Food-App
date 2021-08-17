@@ -1,0 +1,96 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.7);
+    z-index: 1;
+}
+
+.content {
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 220px;
+    background: #fff;
+    z-index: 2;
+    border-radius: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    animation: cartAnimation 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+}
+
+@keyframes cartAnimation {
+    0% {top: 28%; opacity: 0.5}   
+    100% {top: 30%}
+}
+
+.close {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 20px;
+    background: black;
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+    
+}
+
+
+.close:hover {
+    background-color: brown;
+    transition: 0.2s;
+}
+
+
+.footer {
+    padding: 20px;
+    font-size: large;
+    font-weight: bold;
+}
+
+.cartMain {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+}
+
+.cartContent {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 40px 0 10px 0;
+    border-bottom: 1px solid;
+}
+
+.cartContent span#title {
+    font-weight: bold;
+    font-size: 15px;
+    flex: 1;
+}
+
+.cartContent span#qty {
+    font-weight: bold;
+    font-size: 15px;
+    flex: 1;
+    align-items: center;
+    text-align: center;
+}
+
+.cartContent span#amount {
+    font-weight: bold;
+    font-size: 15px;
+    flex: 1;
+    align-items: right;
+    text-align: center;
+}
