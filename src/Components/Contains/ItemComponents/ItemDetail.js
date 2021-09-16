@@ -23,7 +23,7 @@ const ItemDetail = (props) => {
             <span id={style.tickicon}>
               <BiCheckCircle />
             </span>{" "}
-            You Save {props.save} with this Purchase
+            You Saved {props.save}
           </span>
         </div>
       </div>

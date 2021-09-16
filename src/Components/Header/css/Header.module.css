@@ -58,15 +58,18 @@
 }
 
 .number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 1.1rem;
     font-weight: bold;
+    margin: auto;
     background-color: rgb(121, 0, 0);
     color: white;
     height: 30px;
     width: 30px;
     border-radius: 50%;
     margin: 5px;
-    text-align: center;
 }
 
 
@@ -83,5 +86,47 @@
     }
     100% {
         transform: scale(1);
+    }
+}
+
+
+@media (max-width: 480px) {
+    .header {
+        display: flex;
+        margin: 0;
+        padding: 10px;
+        flex-direction: row;
+        justify-content: space-around;
+        background-color: black;
+        height: 45px;
+        position: fixed;    
+        width: 100%;
+        z-index: 1;
+    }
+
+    .brand {
+        display: flex;
+        width: 100px;
+        padding: 0px;
+        margin: 0px;
+        color: white;
+        font-size: 1.5rem;
+        font-weight: bold;
+        align-items: center;
+        font-family: 'Style Script', cursive;
+        transition: 0.3s ease;
+    }
+
+    .cart {
+        background-color: rgb(177, 75, 75);
+        width: 180px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 30px;
+        color: white;
+        font-weight: bold;
+        transition: 0.3s;
+        cursor: pointer;
     }
 }

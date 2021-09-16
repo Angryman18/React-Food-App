@@ -33,10 +33,12 @@
 
 @keyframes cartAnimation {
     0% {
-        height: auto;
+        height: 0;
+        opacity: 0.1;
     }
     100% {
-       height: auto;
+       height: 100px;
+       opacity: 1;
     }
 }
 
@@ -50,7 +52,7 @@
 }
 
 .contentInner::-webkit-scrollbar {
-    width: 3px;
+    width: 5px;
 }
 
 .contentInner::-webkit-scrollbar-thumb {
@@ -110,6 +112,7 @@ button#cancel:hover {
     background-color: red;
     color: white;
     transition: 0.1s ease;
+    font-weight: bold;
 }
 button.confirm {
     margin: 0px 5px;
@@ -253,4 +256,91 @@ button.confirm:hover {
     color: green;
     margin: auto;
     margin-bottom: 20px;
+}
+
+.hideButton {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.hideButton span {
+    background-color: RGB(85, 180, 176);
+    padding: 10px 20px;
+    color: #fff;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+@media (max-width: 480px) {
+
+    * {
+        font-family: 'Noto Sans JP', sans-serif;
+        font-weight: 400;
+        font-size: 0.9rem;
+    }
+    
+
+    .content {
+        position: fixed;
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%, -35%);
+        width: 90vw;
+        background: #fff;
+        z-index: 20;
+        border-radius: 20px;
+        padding: 10px;
+        box-sizing: border-box;
+        /* animation: identifier 0.3s ease-out; */
+        
+    }
+
+    button.close {
+        margin: 0px 5px;
+        padding: 8px 15px;
+        color: white;
+        cursor: pointer;
+        background-color: rgba(128, 6, 6);
+        border-radius: 20px;
+        outline: none;
+        border: 2px solid rgba(128, 6, 6);
+    }
+    
+    button.close:hover {
+        background-color: rgb(95, 5, 5);
+    }
+
+    .footer span#footer_amount {
+        font-weight: bold;
+        font-size: 1.1rem;
+        flex: 1;
+        text-align: center;   
+    }
+
+    .hideButton {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .hideButton span {
+        background-color: RGB(85, 180, 176);
+        padding: 10px 20px;
+        color: #fff;
+        border-radius: 20px;
+        font-weight: bold;
+        transition: 0.3s ease;
+    }
+
+    .contentInner {
+        max-height: 200px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        padding: 0 0px 0 10px;
+        height: 90%;
+    }
+
 }

@@ -5,6 +5,8 @@ import { FoodContext } from "../store/cart-context";
 import Checkout from "./Checkout/Checkout";
 import useFetch from "../../Hooks/useFetch";
 
+
+
 const Model = (props) => {
   const Context = React.useContext(FoodContext);
   const [isCheckout, setIsCheckout] = React.useState(false);
@@ -51,19 +53,35 @@ const Model = (props) => {
     </>
   );
 
+  const totalQty = Context.item.reduce((a,b) => {
+    return a + +b.amount
+  },0)
+  const hideButton = (
+    <div className={style.hideButton}>
+      <span onClick={() => setIsCheckout(false)}>⬆ Total {totalQty} Items </span>
+    </div>
+  );
+
+
+  
+
   const Overlay = (props) => {
     return (
       <div className={style.content}>
         {error && <p className={style.error__cart}>No Item Found.</p>}
-        <div className={style.contentInner}>{props.children}</div>
+        {!isCheckout ? (
+          <div className={style.contentInner}>{props.children}</div>
+        ) : (
+          hideButton
+        )}
 
         <div className={style.footer}>
           {!status && footerSection}
           {!isCheckout && !status && (
             <>
-              <button onClick={props.close} id={style.close}>
+              {/* <button onClick={props.close} id={style.close}>
                 Close
-              </button>
+              </button> */}
               <button onClick={CheckOut} className={style.close}>
                 Check Out
               </button>
@@ -75,7 +93,11 @@ const Model = (props) => {
         )}
 
         {loading && <p className={style.orderPlace}>Loading</p>}
-        {!loading && status && <p className={style.orderPlace}>✔ You Have Successfully Place the Order</p>}
+        {!loading && status && (
+          <p className={style.orderPlace}>
+            ✔ You Have Successfully Place the Order
+          </p>
+        )}
       </div>
     );
   };

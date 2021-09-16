@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap');
 
+
 .item {
     display: flex;
     justify-content: space-between;   
@@ -135,4 +136,296 @@ span#tickicon {
 span t{
     font-weight: bold;
     color: rgb(92, 91, 84);
+}
+
+.imagestyle {
+    width: 100px;
+    height: 100px;
+}
+
+@media (max-width: 480px) {
+
+    .item {
+        display: flex;
+        justify-content: space-between;   
+        width: auto;
+        height: auto;
+        border: 1px solid;
+        padding: 15px;
+        border-radius: 10px;
+        margin: 10px;
+        transition: 0.2s ease-out;
+        background-color: #F0E68C;
+    }
+
+    .itemDesc {
+        width: 100%;
+        text-align: left;
+        padding:10px;
+    
+    }
+
+    span#qtyinput input{
+        outline: none;
+        border: 1px solid;
+        width: 30%;
+        padding: 5px;
+        border-radius: 5px;
+        font-weight: bold;
+        font-size: 0.9rem;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    
+    span#qtyinput input:focus {
+        border: 2px solid black;
+    }
+    
+    span#salepricetext{
+        font-weight: bold;
+    }
+    
+    button#btnAdd {
+        width: 70px;
+        height: 40px;
+        font-size: 1rem;
+        font-weight: bold;
+        border: 0px;
+        background: brown;
+        float: right;
+        color: white;
+        border-radius: 40px;
+        cursor: pointer;
+        transition: 0.1s ease-in-out;
+        font-family: 'Hammersmith One', sans-serif;
+    }
+
+    span#salepricetext{
+        font-weight: bold;
+        font-size: 0.7rem;
+    }
+
+    button#btnAdd:hover {
+        width: 75px;
+        font-size: 1rem;
+        border: 2px solid black;
+        background-color: brown;
+        transition: 0.1s ease-in;
+        font-family: 'Hammersmith One', sans-serif;
+    }
+    
+    .category {
+        font-size: 1.5rem;
+        font-weight: bold;
+        font-family: 'Hammersmith One', sans-serif;
+    }
+    
+    span#price {
+        font-size: 0.9rem;
+        font-weight: bold;   
+    }
+    .imagestyle {
+        width: 80px;
+        height: 80px;
+    }
+
+    .thumbnail {
+        align-items: center;
+    }
+    
+    span#actualprice {
+        padding-left: 5px;
+        text-decoration: line-through;
+        font-style: italic;
+        font-size: 0.9rem;
+        font-weight: bold;
+        color: red;
+    }
+    span#timeicon {
+        vertical-align: middle;
+        font-size: 0.9rem;
+    }
+    
+    span#save {
+        font-size: small;
+        color: green;
+        font-weight: bold;
+        font-style: italic;
+        margin: 0px;
+        font-size: 0.8rem;
+    }
+    
+    span#tickicon {
+        vertical-align: middle;
+    }
+
+    span#qty {
+        font-weight: bold;
+        margin: 0;
+        padding: 0;
+    }
+    
+    span t{
+        font-weight: bold;
+        color: rgb(92, 91, 84);
+    }
+
+    .itemQun{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: right;
+        text-align: right;
+    }    
+    .itemQun div:nth-child(1) {
+        width: 100%;
+        margin: 10px;
+    }
+
+}
+
+@media (max-width: 650px) {
+    .item {
+        display: flex;
+        justify-content: space-between;   
+        width: auto;
+        height: auto;
+        border: 1px solid;
+        padding: 15px;
+        border-radius: 10px;
+        margin: 10px;
+        transition: 0.2s ease-out;
+        background-color: #F0E68C;
+    }
+
+    .itemDesc {
+        width: 100%;
+        text-align: left;
+        padding:10px;
+    
+    }
+
+    .item:hover {
+        width: auto;
+        transition: 0.2s ease-out;
+    }
+
+    span#qtyinput input{
+        outline: none;
+        border: 1px solid;
+        width: 30%;
+        padding: 5px;
+        border-radius: 5px;
+        font-weight: bold;
+        font-size: 0.9rem;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    
+    span#qtyinput input:focus {
+        border: 2px solid black;
+    }
+    
+    span#salepricetext{
+        font-weight: bold;
+    }
+    
+    button#btnAdd {
+        width: 70px;
+        height: 40px;
+        font-size: 1rem;
+        font-weight: bold;
+        border: 0px;
+        background: brown;
+        float: right;
+        color: white;
+        border-radius: 40px;
+        cursor: pointer;
+        transition: 0.1s ease-in-out;
+        font-family: 'Hammersmith One', sans-serif;
+    }
+
+    span#salepricetext{
+        font-weight: bold;
+        font-size: 0.7rem;
+    }
+
+    button#btnAdd:hover {
+        width: 75px;
+        font-size: 1rem;
+        border: 2px solid black;
+        background-color: black;
+        transition: 0.1s ease-in;
+        font-family: 'Hammersmith One', sans-serif;
+    }
+
+    button#btnAdd:active {
+            background-color: black;
+    }
+    
+    .category {
+        font-size: 1rem;
+        font-weight: bold;
+        font-family: 'Hammersmith One', sans-serif;
+    }
+    
+    span#price {
+        font-size: 0.7rem;
+        font-weight: bold;   
+    }
+    .imagestyle {
+        width: 70px;
+        height: 70px;
+    }
+
+    .thumbnail {
+        align-items: center;
+    }
+    
+    span#actualprice {
+        padding-left: 5px;
+        text-decoration: line-through;
+        font-style: italic;
+        font-size: 0.85rem;
+        font-weight: bold;
+        color: red;
+    }
+    span#timeicon {
+        vertical-align: middle;
+        font-size: 0.8rem;
+    }
+    
+    span#save {
+        font-size: small;
+        color: green;
+        font-weight: bold;
+        font-style: italic;
+        margin: 0px;
+        font-size: 0.8rem;
+    }
+    
+    span#tickicon {
+        vertical-align: middle;
+    }
+
+    span#qty {
+        font-weight: bold;
+        margin: 0;
+        padding: 0;
+    }
+    
+    span t{
+        font-weight: bold;
+        color: rgb(92, 91, 84);
+    }
+
+    .itemQun{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: right;
+        text-align: right;
+    }    
+    .itemQun div:nth-child(1) {
+        width: 100%;
+        margin: 10px;
+    }
 }
