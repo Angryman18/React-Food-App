@@ -1,47 +1,49 @@
-@import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Handlee&display=swap");
 
 .main {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .Card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 500px;
-    height: 175px;
-    border-radius: 30px;
-    background: rgb(68,0,226);
-    background: linear-gradient(90deg, rgba(68,0,226,0.7875525210084033) 0%, rgba(0,0,0,1) 100%);
-    color: wheat;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    text-align: center;
-    transition: 0.3s ease-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height: 175px;
+  border-radius: 30px;
+  background: rgb(68, 0, 226);
+  background: linear-gradient(
+    90deg,
+    rgba(68, 0, 226, 0.7875525210084033) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  color: wheat;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+  transition: 0.3s ease-out;
 }
 
 .Card:hover {
-    transform: scale(1.1);
-    transition: 0.3s ease-out;
+  transform: scale(1.1);
+  transition: 0.3s ease-out;
 }
 
 .Card h2 {
-    
-    color: greenyellow;
-    font-weight: bold;
-    font-family: 'Handlee', cursive;
-    font-size: 1.2rem;
+  color: greenyellow;
+  font-weight: bold;
+  font-family: "Handlee", cursive;
+  font-size: 1.2rem;
 }
 
 .Card p {
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    font-size: 1.1rem;
-    width: 400px;
-    font-family: 'Handlee', cursive;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 1.1rem;
+  width: 400px;
+  font-family: "Handlee", cursive;
 }

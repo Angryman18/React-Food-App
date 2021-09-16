@@ -1,41 +1,42 @@
-import React from 'react';
-import style from './Cart.module.css';
-import Model from './Model';
-
+import React from "react";
+import Model from "./Model";
+import { FoodContext } from "../store/cart-context";
+import CartItem from "./CartItem";
 
 const Cart = (props) => {
+  const Context = React.useContext(FoodContext);
+
+  const amount = (a, b) => {
+    return (+a * +b).toFixed(2);
+  };
+
+  const removeitem = (item) => {
+    Context.removeItem(item);
+  };
+
+  const addItems = (item) => {
+    Context.addSingleItem(item)
+  }
 
 
-    return (
-        <React.Fragment>
-            <Model onClickBackdrops={props.onClickBackdrops}>
-                <div onClick={props.onClick} className={style.close}>&times;</div>
-                <div className={style.cartMain}>
-                    <div className={style.cartContent}>
-                        <span id={style.title}>Baking Rice</span>
-                        <span id={style.qty}>x54</span>
-                        <span id={style.amount}>$45.65</span>
-                    </div>
+  const cartItems = Context.item.map((itm) => (
+    <CartItem
+      key={itm.id}
+      id={itm.id}
+      title={itm.item}
+      qty={itm.amount}
+      price={itm.price}
+      onRemove={removeitem.bind(null, itm)}
+      onAdd={addItems.bind(null, itm)}
+      amount={amount(itm.price, itm.amount)}
+    />
+  ));
 
-                    <div className={style.cartContent}>
-                        <span id={style.title}>Baking Rice</span>
-                        <span id={style.qty}>x54</span>
-                        <span id={style.amount}>$45.65</span>
-                    </div>
-
-                    <div className={style.cartContent}>
-                        <span id={style.title}>Baking Rice</span>
-                        <span id={style.qty}>x54</span>
-                        <span id={style.amount}>$45.65</span>
-                    </div>
-                    
-                </div>
-                
-            </Model>
-            
-        </React.Fragment>
-    );
-
-}
+   return (
+    <Model onClickClose={props.onClickClose} onClickBackdrops={props.onClickBackdrops}>
+      {cartItems}
+    </Model>
+  );
+};
 
 export default Cart;
